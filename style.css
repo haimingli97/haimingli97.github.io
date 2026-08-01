@@ -1,0 +1,180 @@
+/* ---------------------------------------------------------------
+   Haiming (Richard) Li — academic site
+   Plain, conventional, fast. No webfonts, no frameworks.
+   To change the accent color, edit --link below.
+   --------------------------------------------------------------- */
+
+:root {
+  --ink:    #16181d;
+  --muted:  #5b6270;
+  --rule:   #d8dbe0;
+  --link:   #1f4e79;
+  --bg:     #ffffff;
+  --measure: 40rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 3rem 1.5rem 5rem;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; }
+
+/* ---- masthead ---- */
+
+.masthead { margin-bottom: 2rem; }
+
+.masthead h1 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.35rem;
+}
+
+.masthead .affil {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ---- navigation ---- */
+
+nav {
+  margin: 1.25rem 0 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+nav a {
+  margin-right: 1.5rem;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+nav a:hover { color: var(--link); text-decoration: underline; }
+nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+
+/* ---- portrait ---- */
+
+.portrait {
+  float: right;
+  width: 9.5rem;
+  margin: 0.25rem 0 1.25rem 1.75rem;
+  border-radius: 2px;
+}
+
+/* ---- text ---- */
+
+p { margin: 0 0 1.1rem; }
+
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
+
+h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--muted);
+  margin: 2.75rem 0 1.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+  clear: both;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.3rem;
+}
+
+/* ---- paper entries ---- */
+
+.paper { margin-bottom: 1.9rem; }
+
+.paper .byline {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  margin: 0 0 0.5rem;
+}
+
+.paper .abstract { margin: 0 0 0.5rem; }
+
+.paper .links {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.paper .links a { margin-right: 1rem; }
+
+/* compact entries for works in progress */
+
+ul.compact { padding-left: 1.15rem; margin: 0 0 1.1rem; }
+ul.compact li { margin-bottom: 0.6rem; }
+ul.compact .byline { color: var(--muted); font-size: 0.9375rem; }
+
+/* ---- contact block ---- */
+
+.contact {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.9;
+}
+
+.contact .label {
+  display: inline-block;
+  min-width: 5.5rem;
+  color: var(--muted);
+}
+
+/* ---- placeholder marker: search the files for TBD to find open items ---- */
+
+.tbd {
+  background: #fff3cd;
+  padding: 0 0.2em;
+  border-radius: 2px;
+}
+
+/* ---- footer ---- */
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---- small screens ---- */
+
+@media (max-width: 34rem) {
+  body { padding-top: 2rem; font-size: 1rem; }
+  .portrait { float: none; display: block; margin: 0 0 1.25rem; width: 8rem; }
+  nav a { margin-right: 1.1rem; display: inline-block; margin-bottom: 0.35rem; }
+}
+
+/* ---- print ---- */
+
+@media print {
+  nav, footer { display: none; }
+  body { padding: 0; }
+  a { color: var(--ink); text-decoration: none; }
+}
+
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
