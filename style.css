@@ -168,7 +168,24 @@ p.note { color: var(--muted); font-size: 0.9375rem; }
 
 .refs p { margin-bottom: 1rem; }
 
-/* ---- aside box (Off the Clock page) ---- */
+/* ---- Off the Clock page ---- */
+
+p.lede { font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 0.5rem; }
+
+.minipaper {
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  padding: 1rem 1.25rem 0.2rem;
+  margin: 0 0 1.5rem;
+  background: #fafbfd;
+}
+.minipaper .mp-title { font-weight: 600; font-size: 1.1rem; text-align: center; margin: 0 0 0.6rem; }
+.minipaper .mp-label {
+  text-align: center; font-variant: small-caps; letter-spacing: 0.05em;
+  color: var(--muted); margin: 0 0 0.4rem;
+}
+
+/* ---- aside box ---- */
 
 .aside {
   border-left: 3px solid var(--accent);
