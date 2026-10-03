@@ -147,6 +147,45 @@ ul.news .when {
 img.figure { display: block; width: 100%; height: auto; margin: 0.75rem 0; border: 1px solid var(--rule); }
 img.badge { float: left; width: 4.5rem; height: auto; margin: 0.1rem 1rem 0.5rem 0; }
 
+/* ---- course table ---- */
+
+table.courses { width: 100%; border-collapse: collapse; margin: 0 0 0.9rem; font-size: 0.97rem; }
+table.courses th {
+  text-align: left; font-weight: 600; color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.8125rem; padding: 0 0.6rem 0.35rem 0; border-bottom: 1px solid var(--rule);
+}
+table.courses td { padding: 0.4rem 0.6rem 0.4rem 0; vertical-align: top; border-bottom: 1px solid var(--rule); }
+table.courses td:last-child, table.courses th:last-child { white-space: nowrap; padding-right: 0; }
+table.courses tr.group td {
+  border-bottom: none; padding-top: 0.9rem; font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.8125rem; letter-spacing: 0.03em; text-transform: uppercase;
+}
+p.note { color: var(--muted); font-size: 0.9375rem; }
+
+/* ---- references ---- */
+
+.refs p { margin-bottom: 1rem; }
+
+/* ---- aside box (Off the Clock page) ---- */
+
+.aside {
+  border-left: 3px solid var(--accent);
+  background: #f5f7fb;
+  padding: 0.8rem 1rem 0.1rem;
+  margin: 1.2rem 0 1.4rem;
+  font-size: 0.97rem;
+}
+.aside-title {
+  margin: 0 0 0.35rem; font-weight: 600; color: var(--accent);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+}
+figure.photo { margin: 0 0 1.2rem; }
+figure.photo img { display: block; width: 100%; height: auto; border-radius: 2px; }
+figure.photo figcaption { color: var(--muted); font-size: 0.875rem; margin-top: 0.35rem; }
+
 /* ---- contact block ---- */
 
 .contact {
