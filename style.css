@@ -164,6 +164,57 @@ table.courses tr.group td {
 }
 p.note { color: var(--muted); font-size: 0.9375rem; }
 
+/* ---- evaluation table and quotes ---- */
+
+.evals { margin: 0 0 0.6rem; font-size: 0.95rem; }
+.ev-head, .evals summary, .ev-row:not(details) {
+  display: grid; grid-template-columns: 6.3rem 4.2rem 8.8rem 3.7rem 4.2rem 1fr; gap: 0 0.6rem; align-items: center;
+  padding: 0.45rem 0; border-bottom: 1px solid var(--rule);
+}
+.ev-head {
+  font-weight: 600; color: var(--muted); font-size: 0.8125rem; padding-top: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.evals summary { cursor: pointer; list-style: none; }
+.evals summary::-webkit-details-marker { display: none; }
+.evals summary > span:first-child::before { content: "\25B8"; color: var(--accent); display: inline-block; width: 0.9rem; margin-left: -0.9rem; transition: transform 0.15s; }
+.evals details[open] summary > span:first-child::before { transform: rotate(90deg); }
+.evals summary:hover { background: #f5f7fb; }
+.ev-detail { padding: 0.3rem 0 0.5rem 0; border-bottom: 1px solid var(--rule); background: #fafbfd; }
+.ev-q { display: grid; grid-template-columns: 6.3rem 4.2rem 8.8rem 3.7rem 4.2rem 1fr; gap: 0 0.6rem; align-items: center; padding: 0.22rem 0 0.22rem 0.9rem; font-size: 0.875rem; }
+.ev-q .ev-qlabel { grid-column: 1 / 4; color: var(--ink); }
+.evals .n { text-align: right; }
+.evals .muted { color: var(--muted); }
+.evals .viz { min-width: 0; padding-right: 0.5rem; }
+.ev-head, .ev-row:not(details), details.ev-row { padding-left: 0.9rem; }
+.axis { display: flex; justify-content: space-between; font-weight: 400; }
+.ev-head .key-me, .ev-head .key-ref { margin: 0 0.3rem 0 0; }
+.legend { font-weight: 400; white-space: nowrap; }
+.key-me, .key-ref { display: inline-block; vertical-align: middle; }
+.key-me { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--accent); margin-left: 0; }
+.key-ref { width: 2px; height: 0.8rem; background: var(--ink); }
+
+ul.materials { padding-left: 1.15rem; }
+ul.materials li { margin-bottom: 0.5rem; }
+.mat-note { color: var(--muted); font-size: 0.9375rem; }
+
+.bar { position: relative; display: block; width: 100%; height: 0.8rem; }
+.bar::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--rule); }
+.bar .me { position: absolute; top: 50%; width: 0.7rem; height: 0.7rem; margin: -0.35rem 0 0 -0.35rem; background: var(--accent); border-radius: 50%; z-index: 1; }
+.bar .ref { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--ink); }
+blockquote.quote { margin: 0 0 1.1rem; padding: 0.1rem 0 0.1rem 1rem; border-left: 3px solid var(--accent); }
+blockquote.quote p { margin: 0 0 0.3rem; font-style: italic; }
+blockquote.quote cite {
+  font-style: normal; color: var(--muted); font-size: 0.8125rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (max-width: 34rem) {
+  .ev-head, .evals summary, .ev-row:not(details) { grid-template-columns: 5.6rem 4rem 3.6rem 3.8rem; }
+  .ev-role, .evals .viz { display: none; }
+  .ev-q { grid-template-columns: 5.6rem 4rem 3.6rem 3.8rem; padding-left: 0; }
+  .ev-q .ev-qlabel { grid-column: 1 / 3; padding-left: 0.5rem; }
+}
+
 /* ---- references ---- */
 
 .refs p { margin-bottom: 1rem; }
