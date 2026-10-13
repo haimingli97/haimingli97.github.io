@@ -327,3 +327,96 @@ footer {
 }
 
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+/* ---- Teaching at the Margin ---- */
+
+.margin-lede { margin-bottom: 0.6rem; }
+
+.margin-steps {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.4rem;
+  align-items: end; height: 5.6rem; margin: 0.4rem 0 1.4rem;
+  border-bottom: 1px solid var(--rule); padding-bottom: 0.5rem;
+}
+.margin-steps span {
+  display: flex; align-items: center; justify-content: center;
+  height: 2.6rem; margin-bottom: calc(var(--i) * 0.45rem);
+  border: 1px solid var(--accent); border-radius: 2px; background: #f5f7fb;
+  color: var(--accent); font-weight: 600; font-size: 1.35rem;
+}
+.margin-steps span:last-child { background: var(--accent); color: #fff; }
+
+ol.margin { list-style: none; padding: 0; margin: 0 0 1.6rem; }
+ol.margin li {
+  display: grid; grid-template-columns: 2.4rem 1fr; gap: 0 0.9rem;
+  padding: 0.75rem 0 0.35rem; border-bottom: 1px solid var(--rule);
+}
+ol.margin li:first-child { padding-top: 0; }
+.m-letter {
+  display: flex; align-items: center; justify-content: center;
+  width: 2.4rem; height: 2.4rem; border-radius: 2px;
+  background: var(--accent); color: #fff; font-weight: 600; font-size: 1.25rem;
+}
+.m-body p { margin: 0 0 0.45rem; }
+.m-body p.m-head {
+  font-weight: 600; margin-bottom: 0.15rem; line-height: 1.3;
+}
+.ai-tag {
+  display: inline-block; margin-left: 0.4rem; padding: 0 0.35rem; border-radius: 2px;
+  border: 1px solid var(--accent); color: var(--accent); font-size: 0.7rem; letter-spacing: 0.06em;
+  vertical-align: 0.15em; font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.m-body p.m-ai {
+  background: #f5f7fb; border-left: 3px solid var(--accent);
+  padding: 0.35rem 0.7rem; font-size: 0.97rem;
+}
+.ai-label {
+  font-weight: 600; color: var(--accent); font-size: 0.875rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+h3.ai-h { margin-top: 1.8rem; }
+
+ol.ai-flow {
+  list-style: none; padding: 0; margin: 0.4rem 0 0.9rem;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.55rem;
+  counter-reset: none;
+}
+ol.ai-flow li {
+  position: relative; border: 1px solid var(--rule); border-top: 3px solid var(--accent);
+  border-radius: 2px; padding: 0.55rem 0.6rem 0.6rem; background: #fff;
+  display: flex; flex-direction: column; gap: 0.2rem;
+}
+ol.ai-flow li:nth-child(1), ol.ai-flow li:nth-child(4) { background: #fafbfd; }
+ol.ai-flow li:not(:last-child)::after {
+  content: "\203A"; position: absolute; right: -0.48rem; top: 1.1rem;
+  color: var(--accent); font-size: 1.2rem; line-height: 1; background: var(--bg); z-index: 1;
+}
+.af-n {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.75rem; color: var(--muted); font-weight: 600;
+}
+.af-t { font-weight: 600; line-height: 1.25; font-size: 0.97rem; }
+.af-d { font-size: 0.875rem; color: var(--muted); line-height: 1.45; }
+
+/* ---- ACUE course badge ---- */
+
+.acue-course { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0 1.1rem; align-items: start; margin-bottom: 1rem; }
+.acue-course img { width: 6.5rem; height: auto; display: block; }
+.acue-course p { margin-bottom: 0.5rem; }
+ul.modules {
+  margin: 0; padding: 0; list-style: none;
+  columns: 2; column-gap: 1.2rem; font-size: 0.9rem; color: var(--muted);
+}
+ul.modules li { break-inside: avoid; padding-left: 0.9rem; position: relative; margin-bottom: 0.15rem; line-height: 1.4; }
+ul.modules li::before { content: "\2713"; position: absolute; left: 0; color: var(--accent); font-size: 0.8rem; }
+
+@media (max-width: 34rem) {
+  .margin-steps { height: 4.8rem; gap: 0.3rem; }
+  .margin-steps span { height: 2.2rem; font-size: 1.15rem; margin-bottom: calc(var(--i) * 0.35rem); }
+  ol.ai-flow { grid-template-columns: 1fr 1fr; }
+  ol.ai-flow li:nth-child(2)::after { display: none; }
+  .acue-course { grid-template-columns: 4.5rem 1fr; }
+  .acue-course img { width: 4.5rem; }
+  ul.modules { columns: 1; }
+}
