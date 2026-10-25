@@ -380,3 +380,5 @@ footer.site-foot .wrap { padding-top: 1rem; padding-bottom: 2rem; }
 .paper .links .note { color: var(--muted); }
 table.courses tr.group td { text-align: left; }
 .quotes { align-items: start; }
+
+.interest-note { font-size: 0.97rem; color: var(--ink); margin: 0 0 0.6rem; }
